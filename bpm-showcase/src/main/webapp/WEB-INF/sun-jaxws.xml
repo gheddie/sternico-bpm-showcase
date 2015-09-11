@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
-  <endpoint name="HelloWs" implementation="de.sternico.bpm.service.BpmEngineAccessor" url-pattern="/HelloWs" />
+  <endpoint name="BpmEngineAccessorWs" implementation="de.sternico.bpm.service.BpmEngineAccessor" url-pattern="/BpmEngineAccessorWs" />
 </endpoints>
