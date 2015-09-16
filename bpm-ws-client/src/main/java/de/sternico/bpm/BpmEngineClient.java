@@ -23,7 +23,7 @@ public class BpmEngineClient
         BpmEngineAccessor accessor = new BpmEngineAccessorService().getBpmEngineAccessorPort();
         
         List<TaskDTO> taskList = accessor.queryAllTasks().getItem();
-        System.out.println(taskList.size() + " tasks...");
+        System.out.println(taskList.size() + " tasks....");
         for (TaskDTO dto : taskList)
         {
             System.out.println(dto.getName() + " :: [task id="+dto.getTaskId()+"]");
