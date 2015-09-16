@@ -1,7 +1,8 @@
 package de.sternico.bpm;
 
-import org.camunda.bpm.BpmPlatform;
-import org.camunda.bpm.container.RuntimeContainerDelegate;
+import java.util.List;
+
+import org.camunda.bpm.engine.history.HistoricTaskInstance;
 import org.camunda.bpm.engine.test.Deployment;
 import org.camunda.bpm.engine.test.ProcessEngineRule;
 import org.junit.Rule;
@@ -25,9 +26,19 @@ public class LibraryRequestTest
     public void testHistoryService()
     {
         //start process instance
-        //rule.getRuntimeService().startProcessInstanceByKey("LibraryRequestUserProcess");
+        rule.getRuntimeService().startProcessInstanceByKey("LibraryRequestUserProcess");
         
         //query done tasks
-        System.out.println(rule.getHistoryService().createHistoricTaskInstanceQuery().list().size());
+        moo();
+    }
+
+    private void moo()
+    {
+        List<HistoricTaskInstance> historicTaskInstanceList = rule.getHistoryService().createHistoricTaskInstanceQuery().list();
+        System.out.println(historicTaskInstanceList.size());
+        for (HistoricTaskInstance task : historicTaskInstanceList)
+        {
+            System.out.println(task.getTaskDefinitionKey());
+        }
     }
 }
