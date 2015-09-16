@@ -8,6 +8,8 @@ public class TaskDTO implements Serializable
     
     private String name;
     
+    private String taskId;
+    
     public String getName()
     {
         return name;
@@ -16,5 +18,15 @@ public class TaskDTO implements Serializable
     public void setName(String name)
     {
         this.name = name;
+    }
+    
+    public String getTaskId()
+    {
+        return taskId;
+    }
+    
+    public void setTaskId(String taskId)
+    {
+        this.taskId = taskId;
     }
 }

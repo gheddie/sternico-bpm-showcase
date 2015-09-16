@@ -25,27 +25,6 @@ public interface BpmEngineAccessor {
 
     /**
      * 
-     * @param arg0
-     */
-    @WebMethod
-    public void startProcessInstanceByKey(
-        @WebParam(name = "arg0", partName = "arg0")
-        String arg0);
-
-    /**
-     * 
-     * @param arg1
-     * @param arg0
-     */
-    @WebMethod
-    public void correlateMessage(
-        @WebParam(name = "arg0", partName = "arg0")
-        String arg0,
-        @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
-
-    /**
-     * 
      * @return
      *     returns de.sternico.bpm.service.TaskDTOArray
      */
@@ -55,8 +34,50 @@ public interface BpmEngineAccessor {
 
     /**
      * 
+     * @param arg0
+     */
+    @WebMethod
+    public void startProcessInstanceByKey(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    public void correlateMessage(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    public void finishTask(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        HashMapContainer arg1);
+
+    /**
+     * 
      */
     @WebMethod
     public void debugProcessDefinitionKeys();
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    public void correlateMessageWithBusinessKey(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1);
 
 }

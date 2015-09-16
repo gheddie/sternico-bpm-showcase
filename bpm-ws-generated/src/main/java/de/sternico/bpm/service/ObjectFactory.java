@@ -30,6 +30,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link HashMapContainer }
+     * 
+     */
+    public HashMapContainer createHashMapContainer() {
+        return new HashMapContainer();
+    }
+
+    /**
+     * Create an instance of {@link HashMapContainer.Values }
+     * 
+     */
+    public HashMapContainer.Values createHashMapContainerValues() {
+        return new HashMapContainer.Values();
+    }
+
+    /**
      * Create an instance of {@link TaskDTOArray }
      * 
      */
@@ -43,6 +59,14 @@ public class ObjectFactory {
      */
     public TaskDTO createTaskDTO() {
         return new TaskDTO();
+    }
+
+    /**
+     * Create an instance of {@link HashMapContainer.Values.Entry }
+     * 
+     */
+    public HashMapContainer.Values.Entry createHashMapContainerValuesEntry() {
+        return new HashMapContainer.Values.Entry();
     }
 
 }
